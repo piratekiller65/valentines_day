@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Purr-fect Story 🐾</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="glitterCanvas"></canvas>
+
+    <!-- Floating Hearts Decoration -->
+    <div id="floatingHearts"></div>
+
+    <!-- Music Toggle -->
+    <button id="musicToggle" class="music-toggle" onclick="toggleMusic()">🎵</button>
+
+    <!-- Background Music - Replace 'music.mp3' with your own song file -->
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="book-viewport" id="storySection">
+        <div class="pages-container" id="pagesContainer">
+
+            <section class="page">
+                <div class="card">
+                    <div class="img-frame"><img src="images/1.HEIC"></div>
+                    <div class="content">
+                        <h2>Chapter 1</h2>
+                        <p>When I started to fall for you...</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page">
+                <div class="card">
+                    <div class="img-frame"><img src="images/2.HEIC"></div>
+                    <div class="content">
+                        <h2>Chapter 2</h2>
+                        <p>Can't count how many times I have looked at this picture.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page">
+                <div class="card">
+                    <div class="img-frame"><img src="images/3.jpg"></div>
+                    <div class="content">
+                        <h2>Chapter 3</h2>
+                        <p>When we first started to date.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page">
+                <div class="card">
+                    <div class="img-frame"><img src="images/4.HEIC"></div>
+                    <div class="content">
+                        <h2>Chapter 4</h2>
+                        <p>Our first trek together., you are more beautiful than the mountains...</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page">
+                <div class="card">
+                    <div class="img-frame"><img src="images/5.jpg"></div>
+                    <div class="content">
+                        <h2>Chapter 5</h2>
+                        <p>I will run after your snow board always and ever!!!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page">
+                <div class="card">
+                    <div class="img-frame"><img src="images/6.HEIC"></div>
+                    <div class="content">
+                        <h2>Chapter 6</h2>
+                        <p>Don't you think we look good together, I mean Damnnnnn!!!!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page">
+                <div class="card">
+                    <div class="img-frame"><img src="images/7.jpg"></div>
+                    <div class="content">
+                        <h2>Chapter 7</h2>
+                        <p>Golden hour has got nothing on you.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page">
+                <div class="card">
+                    <div class="img-frame"><img src="images/8.HEIC"></div>
+                    <div class="content">
+                        <h2>Chapter 8</h2>
+                        <p>You'll always rule my heart, but just a bit ahead of FC Barcelona.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page">
+                <div class="card">
+                    <div class="img-frame"><img src="images/9.jpg"></div>
+                    <div class="content">
+                        <h2>Chapter 9</h2>
+                        <p>My cat.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page">
+                <div class="card">
+                    <div class="img-frame"><img src="images/10.HEIC"></div>
+                    <div class="content">
+                        <h2>Chapter 10</h2>
+                        <p>Will you be my Valentine Riya?</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <div class="nav-overlay">
+            <button class="nav-btn" onclick="changePage(-1)">&#10084; Prev</button>
+            <div class="page-indicator"><span id="currentNum">1</span> / 11</div>
+            <button class="nav-btn" onclick="changePage(1)">Next &#10084;</button>
+        </div>
+    </div>
+
+    <div id="valentineOverlay" class="hidden-overlay">
+        <section class="page">
+            <div class="card val-card" id="finalCard">
+                <h1 class="pink-glow">Will you be my Valentine? 🐾</h1>
+                <div class="btn-group">
+                    <button class="yes-btn" onclick="celebrate()">YES!</button>
+                    <button id="noBtn" class="no-btn">No 🐱</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Angry Cat Popup -->
+    <div id="angryCatModal" class="angry-cat-modal hidden-overlay">
+        <div class="angry-cat-content">
+            <img src="https://media.giphy.com/media/6uGhT1O4sxpi8/giphy.gif" alt="Angry Cat" class="angry-cat-img">
+            <h2 class="angry-cat-text">How dare you!!!!! Try again 😾</h2>
+            <button class="retry-btn" onclick="closeAngryCat()">Okay, okay! 😅</button>
+        </div>
+    </div>
+
+    <!-- Celebration Popup -->
+    <div id="celebrationModal" class="celebration-modal hidden-overlay">
+        <div class="fireworks-container" id="fireworksContainer"></div>
+        <div class="celebration-content">
+            <img src="images/happy-cat.gif" alt="Happy Cat" class="celebration-cat-img">
+            <h1 class="celebration-text">I Love You So Much!!!! 💕</h1>
+            <p class="celebration-subtitle">Congratulations on being my Valentine, Riya! 🌹✨</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
